@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="simple.js">
+
+        function update() {
+
+            //övning 1
+            var distance = 20;
+            for(var i = 1; i <= 30; i++) {
+                rectangle(distance*i, distance, 10, 10, "blue");
+            }
+
+            //övning 1.1
+            rectangle(100, 100, 100, 100, "blue");
+            circle(350, 100, 50, "yellow");
+            triangle(500, 100, 600, 100, 500, 200, "green");
+            ring(750, 100, 50, 8, "red");
+
+            //övning 1.1b
+            rectangle(300, 400, 100, 200, "blue");  //kropp
+            circle(350, 300, 100, "yellow");        //huvud
+            line(400, 400, 500, 500, 10, "red");    //arm höger
+            line(300, 400, 200, 500, 10, "red");    //arm vänster
+            line(370, 600, 370, 700, 5, "black");   //ben höger
+            line(330, 600, 330, 700, 5, "black");   //ben vänster
+            line(400, 700, 367, 700, 5, "black");   //fot höger
+            line(300, 700, 333, 700, 5, "black");   //fot vänster
+            circle(400, 300, 10, "black");          //öga höger
+            circle(300, 300, 10, "black");          //öga vänster
+            line(350, 300, 350, 340, 1, "black");   //näsa
+            line(350, 380, 390, 340, 1, "black");   //mun höger
+            line(350, 380, 310, 340, 1, "black");   //mun vänster
+            line(420, 280, 380, 280, 1, "black");   //ögonbryn höger
+            line(280, 280, 320, 280, 1, "black");   //ögonbryn vänster
+        }
+    </script>
+</body>
+</html>
