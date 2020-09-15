@@ -49,15 +49,35 @@
         */
 
         //övning 1.4
-        var colors = ["red", "blue", "green", "yellow"];
+        var colors = ["red", "blue", "green", "yellow", "pink", "cyan", "magenta", "orange"];
+        var monochrome = ["white", "grey", "black"];
         /*
         for(var i = 1; i <= 10000; i++) {
             rectangle(random(200), random(200), 10, 10, colors[random(0, 3)]);
         }
         */
        //övning 1.5
+       /*
        for(var i = 1; i <= 500; i++) {
-           line(random(600), random(600), random(600), random(600), 2, colors[random(0, 3)]);
+           line(random(totalWidth), random(totalHeight), random(totalWidth), random(totalHeight), 2, colors[random(0, 3)]);
+       }
+       */
+
+       //övning 1.6
+       var currentX = 0;
+       while(currentX <= 400) {
+        line(0, 0, currentX, 200, 1, "black");      //1.6a
+
+        line(400, 200, currentX, 0, 1, "black");    //
+        line(400, 0, currentX, 200, 1, "black");    //1.6b
+        line(0, 200, currentX, 0, 1, "black");      //
+        currentX += 10;
+       }
+       //1.6c
+       var angle = 0;
+       while(angle <= 2*3.14) {
+           line(totalWidth/2, totalHeight/2, (totalWidth/2) + (cos(angle) * 200), (totalHeight/2) + (sin(angle) * 200), 1, "black");
+           angle += (2*3.14)/72; // för att rita en linje varje 5 grader krävs 72 linjer totalt
        }
     </script>
 </body>
