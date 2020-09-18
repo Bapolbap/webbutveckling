@@ -64,6 +64,7 @@
        */
 
        //övning 1.6
+       /*
        var currentX = 0;
        while(currentX <= 400) {
         line(0, 0, currentX, 200, 1, "black");      //1.6a
@@ -73,12 +74,43 @@
         line(0, 200, currentX, 0, 1, "black");      //
         currentX += 10;
        }
+       */
+
        //1.6c
-       var angle = 0;
-       while(angle <= 2*3.14) {
-           line(totalWidth/2, totalHeight/2, (totalWidth/2) + (cos(angle) * 200), (totalHeight/2) + (sin(angle) * 200), 1, "black");
-           angle += (2*3.14)/72; // för att rita en linje varje 5 grader krävs 72 linjer totalt
+       /*
+       var numberOfLines = 0;
+       function update() {
+           clearScreen();
+            var angle = 0;
+            var lineLength = 200;
+            var color = "black";
+            while(angle <= (2*3.14)) {
+                triangle(totalWidth/2, totalHeight/2,
+                (totalWidth/2) + (cos(angle) * lineLength),
+                (totalHeight/2) + (sin(angle) * lineLength),
+                (totalWidth/2) + (cos(angle + (2*3.14)/numberOfLines) * lineLength),
+                (totalHeight/2) + (sin(angle + (2*3.14)/numberOfLines) * lineLength),
+                "gray");
+
+                line(totalWidth/2, totalHeight/2, (totalWidth/2) + (cos(angle) * lineLength), (totalHeight/2) + (sin(angle) * lineLength), 1, color);
+                line((totalWidth/2) + (cos(angle) * lineLength), (totalHeight/2) + (sin(angle) * lineLength), (totalWidth/2) + (cos(angle + (2*3.14)/numberOfLines) * lineLength),
+                (totalHeight/2) + (sin(angle + (2*3.14)/numberOfLines) * lineLength), 1, color);
+                angle += (2*3.14)/numberOfLines; //rita numberOfLines antal linjer
+            }
+
+            if(numberOfLines < 120) {
+                numberOfLines++;
+            }
        }
+       */
+      //1. 11
+      var randomX = 0;
+      var randomY = 0;
+      for(var i = 1; i <= 10; i++){
+          randomX = random(0, totalWidth);
+          randomY = random(0, totalHeight);
+          text(randomX, randomY, "10", "X= " + randomX + ", Y= " + randomY, "black");
+      }
     </script>
 </body>
 </html>
